@@ -14,121 +14,66 @@
       --yellow-dark: #B89A28;
       --brown: #2C1A0E;
       --brown-mid: #5C3A1E;
-      --white: #FFFEF5;
-      --green: #4A7C3F;
+      --cream: #F7F3EB;
+      --green: #355E3B;
+      --green-dark: #264430;
+      --gold: #C8A24A;
+      --gold-light: #e0ba6a;
+      --charcoal: #333333;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--yellow); font-family: 'Lato', sans-serif; color: var(--brown); min-height: 100vh; }
+    body { background-color: var(--cream); font-family: 'Lato', sans-serif; color: var(--charcoal); min-height: 100vh; }
 
-    /* NAV */
-    .navbar { background-color: var(--brown); position: sticky; top: 0; z-index: 100; }
+    .navbar { background-color: var(--green); position: sticky; top: 0; z-index: 100; }
     .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 60px; }
-    .nav-logo { color: var(--yellow); font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .nav-logo { color: var(--gold-light); font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
     .nav-links { list-style: none; display: flex; align-items: center; gap: 8px; }
-    .nav-links a { color: var(--yellow-light); text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 8px 10px; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--yellow); }
+    .nav-links a { color: #d8f0d8; text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 8px 10px; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
     .nav-icons { display: flex; align-items: center; gap: 4px; margin-left: 8px; }
-    .icon-link { color: var(--yellow-light); display: flex; align-items: center; padding: 6px; transition: color 0.2s; }
-    .icon-link:hover { color: var(--yellow); }
+    .icon-link { color: #d8f0d8; display: flex; align-items: center; padding: 6px; transition: color 0.2s; }
+    .icon-link:hover { color: var(--gold-light); }
     .dropdown { position: relative; }
-    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--brown); min-width: 140px; border-top: 2px solid var(--yellow); list-style: none; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--green); min-width: 160px; border-top: 2px solid var(--gold); list-style: none; }
     .dropdown-menu li a { display: block; padding: 10px 16px; font-size: 0.8rem; }
     .dropdown:hover .dropdown-menu { display: block; }
-    .nav-toggle { display: none; background: none; border: none; color: var(--yellow); font-size: 1.5rem; cursor: pointer; }
+    .nav-toggle { display: none; background: none; border: none; color: var(--gold-light); font-size: 1.5rem; cursor: pointer; }
 
     @media (max-width: 768px) {
       .nav-toggle { display: block; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background-color: var(--brown); padding: 16px 0; gap: 0; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background-color: var(--green); padding: 16px 0; gap: 0; }
       .nav-links.open { display: flex; }
       .nav-links li { width: 100%; text-align: center; }
       .nav-links a { display: block; padding: 12px 20px; }
       .nav-icons { justify-content: center; padding: 8px 0; }
-      .dropdown-menu { position: static; border-top: none; border-left: 3px solid var(--yellow); margin-left: 20px; }
+      .dropdown-menu { position: static; border-top: none; border-left: 3px solid var(--gold); margin-left: 20px; }
       .dropdown:hover .dropdown-menu { display: block; }
     }
-
-    .page-header {
-      background-color: var(--brown);
-      color: var(--yellow-light);
-      text-align: center;
-      padding: 48px 24px 40px;
-    }
-    .page-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      color: var(--yellow);
-      margin-bottom: 8px;
-    }
-    .page-header p { font-size: 0.95rem; opacity: 0.8; letter-spacing: 0.05em; }
-
+    .page-header { background-color: var(--green); color: #d8f0d8; text-align: center; padding: 48px 24px 40px; }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: #ffffff; margin-bottom: 8px; }
+    .page-header p { font-size: 0.95rem; color: var(--gold-light); letter-spacing: 0.05em; }
     .main { max-width: 900px; margin: 0 auto; padding: 52px 24px 80px; }
-
-    .reunion-card {
-      background-color: var(--brown);
-      border-radius: 16px;
-      padding: 40px;
-      margin-bottom: 40px;
-    }
-
-    .reunion-card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--yellow);
-      margin-bottom: 6px;
-    }
-
-    .reunion-card .reunion-meta {
-      font-size: 0.85rem;
-      color: var(--yellow-light);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      opacity: 0.8;
-    }
-
-    .coming-soon-box {
-      border: 2px dashed var(--yellow-dark);
-      border-radius: 10px;
-      padding: 40px 24px;
-      text-align: center;
-    }
-
-    .coming-soon-box p {
-      color: var(--yellow-light);
-      font-size: 1rem;
-      line-height: 1.7;
-      opacity: 0.8;
-    }
-
-    .coming-soon-box .icon {
-      font-size: 2.5rem;
-      display: block;
-      margin-bottom: 16px;
-    }
-
-    .footer {
-      background-color: var(--brown);
-      color: var(--yellow-light);
-      text-align: center;
-      padding: 24px 20px;
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
-    }
+    .reunion-card { background-color: #ffffff; border: 1px solid #e8e0d0; border-radius: 16px; padding: 40px; margin-bottom: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .reunion-card h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--green); margin-bottom: 6px; }
+    .reunion-card .reunion-meta { font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 24px; }
+    .coming-soon-box { border: 2px dashed #d0c8b8; border-radius: 10px; padding: 40px 24px; text-align: center; }
+    .coming-soon-box p { color: #888; font-size: 1rem; line-height: 1.7; }
+    .coming-soon-icon { font-size: 2.5rem; display: block; margin-bottom: 16px; }
+    .footer { background-color: var(--green); color: #d8f0d8; text-align: center; padding: 24px 20px; font-size: 0.8rem; letter-spacing: 0.05em; }
   </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Appleby Family Reunion</a>
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="upcoming.html">Upcoming Reunion</a></li>
         <li><a href="family-tree.html">Family Tree</a></li>
         <li class="dropdown">
-          <a href="reunions.html">Past Reunions ▾</a>
+          <a href="reunions.html">Past Reunions &#9662;</a>
           <ul class="dropdown-menu">
             <li><a href="reunions.html#2026">2026</a></li>
           </ul>
@@ -139,7 +84,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
           <a href="https://youtube.com" target="_blank" title="YouTube" class="icon-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#D9BB47"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#C8A24A"/></svg>
           </a>
           <a href="mailto:applebythomasfamily@gmail.com" title="Email" class="icon-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -148,34 +93,25 @@
       </ul>
     </div>
   </nav>
-
   <div class="page-header">
     <h1>Past Reunions</h1>
     <p>Every year, a new memory.</p>
   </div>
-
   <div class="main">
-
     <div class="reunion-card" id="2026">
       <h2>2026 Reunion</h2>
       <div class="reunion-meta">Atlanta, Georgia &nbsp;·&nbsp; June 26–28, 2026</div>
       <div class="coming-soon-box">
-        <span class="icon">📸</span>
+        <span class="coming-soon-icon">📸</span>
         <p>Photos and videos from the 2026 reunion are coming soon.<br>Check back here once the memories are ready to share.</p>
       </div>
     </div>
-
   </div>
-
-  <div class="footer">
-    &copy; 2026 Appleby Family Reunion &nbsp;·&nbsp; Atlanta, Georgia
-  </div>
-
+  <div class="footer">&copy; 2026 Appleby Family Reunion &nbsp;·&nbsp; Atlanta, Georgia</div>
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', function() {
       document.querySelector('.nav-links').classList.toggle('open');
     });
   </script>
-
 </body>
 </html>

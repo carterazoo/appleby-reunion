@@ -14,222 +14,92 @@
       --yellow-dark: #B89A28;
       --brown: #2C1A0E;
       --brown-mid: #5C3A1E;
-      --white: #FFFEF5;
-      --green: #4A7C3F;
+      --cream: #F7F3EB;
+      --green: #355E3B;
+      --green-dark: #264430;
+      --gold: #C8A24A;
+      --gold-light: #e0ba6a;
+      --charcoal: #333333;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--yellow); font-family: 'Lato', sans-serif; color: var(--brown); min-height: 100vh; }
+    body { background-color: var(--cream); font-family: 'Lato', sans-serif; color: var(--charcoal); min-height: 100vh; }
 
-    /* NAV */
-    .navbar { background-color: var(--brown); position: sticky; top: 0; z-index: 100; }
+    .navbar { background-color: var(--green); position: sticky; top: 0; z-index: 100; }
     .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 60px; }
-    .nav-logo { color: var(--yellow); font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .nav-logo { color: var(--gold-light); font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
     .nav-links { list-style: none; display: flex; align-items: center; gap: 8px; }
-    .nav-links a { color: var(--yellow-light); text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 8px 10px; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--yellow); }
+    .nav-links a { color: #d8f0d8; text-decoration: none; font-size: 0.85rem; font-weight: 700; padding: 8px 10px; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
     .nav-icons { display: flex; align-items: center; gap: 4px; margin-left: 8px; }
-    .icon-link { color: var(--yellow-light); display: flex; align-items: center; padding: 6px; transition: color 0.2s; }
-    .icon-link:hover { color: var(--yellow); }
+    .icon-link { color: #d8f0d8; display: flex; align-items: center; padding: 6px; transition: color 0.2s; }
+    .icon-link:hover { color: var(--gold-light); }
     .dropdown { position: relative; }
-    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--brown); min-width: 140px; border-top: 2px solid var(--yellow); list-style: none; }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--green); min-width: 160px; border-top: 2px solid var(--gold); list-style: none; }
     .dropdown-menu li a { display: block; padding: 10px 16px; font-size: 0.8rem; }
     .dropdown:hover .dropdown-menu { display: block; }
-    .nav-toggle { display: none; background: none; border: none; color: var(--yellow); font-size: 1.5rem; cursor: pointer; }
+    .nav-toggle { display: none; background: none; border: none; color: var(--gold-light); font-size: 1.5rem; cursor: pointer; }
 
     @media (max-width: 768px) {
       .nav-toggle { display: block; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background-color: var(--brown); padding: 16px 0; gap: 0; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background-color: var(--green); padding: 16px 0; gap: 0; }
       .nav-links.open { display: flex; }
       .nav-links li { width: 100%; text-align: center; }
       .nav-links a { display: block; padding: 12px 20px; }
       .nav-icons { justify-content: center; padding: 8px 0; }
-      .dropdown-menu { position: static; border-top: none; border-left: 3px solid var(--yellow); margin-left: 20px; }
+      .dropdown-menu { position: static; border-top: none; border-left: 3px solid var(--gold); margin-left: 20px; }
       .dropdown:hover .dropdown-menu { display: block; }
     }
-
-    .page-header {
-      background-color: var(--brown);
-      color: var(--yellow-light);
-      text-align: center;
-      padding: 48px 24px 40px;
-    }
-    .page-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 900;
-      color: var(--yellow);
-      margin-bottom: 8px;
-    }
-    .page-header p { font-size: 0.95rem; opacity: 0.8; letter-spacing: 0.05em; }
-
-    .main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 52px 24px 80px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    @media (max-width: 640px) {
-      .main { grid-template-columns: 1fr; }
-    }
-
-    /* FORM */
-    .form-card {
-      background-color: var(--brown);
-      border-radius: 16px;
-      padding: 36px;
-    }
-    .form-card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: var(--yellow);
-      margin-bottom: 24px;
-    }
+    .page-header { background-color: var(--green); color: #d8f0d8; text-align: center; padding: 48px 24px 40px; }
+    .page-header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: #ffffff; margin-bottom: 8px; }
+    .page-header p { font-size: 0.95rem; color: var(--gold-light); letter-spacing: 0.05em; }
+    .main { max-width: 800px; margin: 0 auto; padding: 52px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    @media (max-width: 640px) { .main { grid-template-columns: 1fr; } }
+    .form-card { background-color: #ffffff; border: 1px solid #e8e0d0; border-radius: 16px; padding: 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .form-card h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--green); margin-bottom: 24px; }
     .form-group { margin-bottom: 18px; }
-    .form-group label {
-      display: block;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--yellow-light);
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      background-color: rgba(255,255,255,0.08);
-      border: 1px solid var(--yellow-dark);
-      border-radius: 8px;
-      padding: 10px 14px;
-      color: var(--white);
-      font-family: 'Lato', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--yellow); }
+    .form-group label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--charcoal); font-weight: 700; margin-bottom: 6px; }
+    .form-group input, .form-group textarea { width: 100%; background-color: #faf8f4; border: 1px solid #d0c8b8; border-radius: 8px; padding: 10px 14px; color: var(--charcoal); font-family: 'Lato', sans-serif; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--green); }
     .form-group textarea { height: 120px; resize: vertical; }
-    .form-note {
-      font-size: 0.75rem;
-      color: var(--yellow-light);
-      opacity: 0.6;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-    .btn-submit {
-      width: 100%;
-      background-color: var(--yellow);
-      color: var(--brown);
-      border: none;
-      border-radius: 8px;
-      padding: 12px;
-      font-family: 'Lato', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .btn-submit:hover { background-color: var(--yellow-light); }
-
-    /* CONNECT */
-    .connect-card {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .connect-card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: var(--brown);
-      margin-bottom: 8px;
-    }
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background-color: var(--brown);
-      border-radius: 12px;
-      padding: 18px 20px;
-      text-decoration: none;
-      color: var(--yellow-light);
-      transition: background-color 0.2s;
-    }
-    .social-link:hover { background-color: #3d2510; }
-    .social-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+    .btn-submit { width: 100%; background-color: var(--green); color: #ffffff; border: none; border-radius: 8px; padding: 12px; font-family: 'Lato', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background-color 0.2s; }
+    .btn-submit:hover { background-color: var(--green-dark); }
+    .success-msg { display: none; background-color: var(--green); color: white; border-radius: 8px; padding: 14px; text-align: center; margin-top: 16px; font-weight: 700; }
+    .connect-card { display: flex; flex-direction: column; gap: 16px; }
+    .connect-card h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--green); margin-bottom: 8px; }
+    .social-link { display: flex; align-items: center; gap: 16px; background-color: #ffffff; border: 1px solid #e8e0d0; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: var(--charcoal); transition: border-color 0.2s, box-shadow 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .social-link:hover { border-color: var(--gold); box-shadow: 0 4px 16px rgba(53,94,59,0.1); }
+    .social-icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .social-icon.fb { background-color: #1877F2; }
     .social-icon.yt { background-color: #FF0000; }
-    .social-icon.em { background-color: var(--yellow-dark); }
-    .social-link-text strong {
-      display: block;
-      color: var(--yellow);
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
-    .social-link-text span {
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
-
-    .footer {
-      background-color: var(--brown);
-      color: var(--yellow-light);
-      text-align: center;
-      padding: 24px 20px;
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
-    }
-
-    .success-msg {
-      display: none;
-      background-color: var(--green);
-      color: white;
-      border-radius: 8px;
-      padding: 14px;
-      text-align: center;
-      margin-top: 16px;
-      font-weight: 700;
-    }
+    .social-icon.em { background-color: var(--green); }
+    .social-link-text strong { display: block; color: var(--green); font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
+    .social-link-text span { font-size: 0.8rem; color: #888; }
+    .footer { background-color: var(--green); color: #d8f0d8; text-align: center; padding: 24px 20px; font-size: 0.8rem; letter-spacing: 0.05em; }
   </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Appleby Family Reunion</a>
       <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li><a href="upcoming.html">Upcoming Reunion</a></li>
         <li><a href="family-tree.html">Family Tree</a></li>
         <li class="dropdown">
-          <a href="reunions.html">Past Reunions ▾</a>
+          <a href="reunions.html">Past Reunions &#9662;</a>
           <ul class="dropdown-menu">
             <li><a href="reunions.html#2026">2026</a></li>
           </ul>
         </li>
         <li><a href="contact.html">Contact Us</a></li>
         <li class="nav-icons">
-          <a href="https://facebook.com" target="_blank" title="Facebook" class="icon-link">
+          <a href="https://www.facebook.com/groups/1897201697803307/" target="_blank" title="Facebook" class="icon-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
           <a href="https://youtube.com" target="_blank" title="YouTube" class="icon-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#D9BB47"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#C8A24A"/></svg>
           </a>
           <a href="mailto:applebythomasfamily@gmail.com" title="Email" class="icon-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -238,17 +108,13 @@
       </ul>
     </div>
   </nav>
-
   <div class="page-header">
     <h1>Contact Us</h1>
     <p>We'd love to hear from you.</p>
   </div>
-
   <div class="main">
-
     <div class="form-card">
       <h2>Send a Message</h2>
-      <p class="form-note">Your message will be sent to applebythomasfamily@gmail.com.</p>
       <form id="contact-form" action="https://formspree.io/f/xnjeppbp" method="POST">
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -266,53 +132,34 @@
         <div class="success-msg" id="success-msg">Message sent! We'll be in touch soon.</div>
       </form>
     </div>
-
     <div class="connect-card">
       <h2>Find Us Online</h2>
-
       <a href="https://www.facebook.com/groups/1897201697803307/" target="_blank" class="social-link">
         <div class="social-icon fb">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </div>
-        <div class="social-link-text">
-          <strong>Facebook Group</strong>
-          <span>Join the family group page</span>
-        </div>
+        <div class="social-link-text"><strong>Facebook Group</strong><span>Join the family group page</span></div>
       </a>
-
       <a href="https://youtube.com" target="_blank" class="social-link">
         <div class="social-icon yt">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
         </div>
-        <div class="social-link-text">
-          <strong>YouTube Channel</strong>
-          <span>Watch reunion videos</span>
-        </div>
+        <div class="social-link-text"><strong>YouTube Channel</strong><span>Watch reunion videos</span></div>
       </a>
-
       <a href="mailto:applebythomasfamily@gmail.com" class="social-link">
         <div class="social-icon em">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="24" height="24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-        <div class="social-link-text">
-          <strong>Email Us</strong>
-          <span>applebythomasfamily@gmail.com</span>
-        </div>
+        <div class="social-link-text"><strong>Email Us</strong><span>applebythomasfamily@gmail.com</span></div>
       </a>
     </div>
-
   </div>
-
-  <div class="footer">
-    &copy; 2026 Appleby Family Reunion &nbsp;·&nbsp; Atlanta, Georgia
-  </div>
-
+  <div class="footer">&copy; 2026 Appleby Family Reunion &nbsp;·&nbsp; Atlanta, Georgia</div>
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', function() {
       document.querySelector('.nav-links').classList.toggle('open');
     });
   </script>
-
   <script>
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', async function(e) {
@@ -321,11 +168,7 @@
       btn.textContent = 'Sending...';
       btn.disabled = true;
       try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
         if (res.ok) {
           form.reset();
           document.getElementById('success-msg').style.display = 'block';
@@ -340,6 +183,5 @@
       }
     });
   </script>
-
 </body>
 </html>
